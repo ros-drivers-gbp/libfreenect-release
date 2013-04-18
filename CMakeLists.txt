@@ -199,3 +199,9 @@ IF ( BUILD_CPACK )
 
 ENDIF ( BUILD_CPACK )
 
+##############################
+# Added for ROS bloom release:
+##############################
+
+# Install catkin package.xml
+install(FILES package.xml DESTINATION share/${PROJECT})
