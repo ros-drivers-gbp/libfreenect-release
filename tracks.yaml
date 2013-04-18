@@ -12,8 +12,8 @@ tracks:
     name: libfreenect
     patches: patches
     release_inc: -1
-    release_tag: :{ask}
+    release_tag: d1d19df8957f8d63a562b310413da15d3e6ef7a1
     ros_distro: groovy
     vcs_type: git
     vcs_uri: https://github.com/OpenKinect/libfreenect.git
-    version: d1d19df8957f8d63a562b310413da15d3e6ef7a1
+    version: :{ask}
