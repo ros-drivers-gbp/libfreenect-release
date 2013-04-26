@@ -1,7 +1,7 @@
-From 3362c673d0fd2b31e3ae395c69c3ef9c3e0dad32 Mon Sep 17 00:00:00 2001
+From d260154e2096c70549d67eddf7b81c1cea983350 Mon Sep 17 00:00:00 2001
 From: Jack O'Quin <jack.oquin@gmail.com>
 Date: Thu, 18 Apr 2013 16:04:02 -0500
-Subject: [PATCH] Added install rule for package.xml
+Subject: [PATCH 1/2] Added install rule for package.xml
 
 ---
  CMakeLists.txt |    6 ++++++
