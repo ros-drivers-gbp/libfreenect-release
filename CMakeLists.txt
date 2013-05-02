@@ -204,4 +204,4 @@ ENDIF ( BUILD_CPACK )
 ##############################
 
 # Install catkin package.xml
-install(FILES package.xml DESTINATION share/${PROJECT})
+install(FILES package.xml DESTINATION share/libfreenect)
