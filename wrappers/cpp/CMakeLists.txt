@@ -1,5 +1,5 @@
 INSTALL(FILES libfreenect.hpp
-  DESTINATION include)
+  DESTINATION include/libfreenect)
 
 IF(BUILD_EXAMPLES)
 
