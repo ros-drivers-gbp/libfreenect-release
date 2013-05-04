@@ -12,7 +12,7 @@ tracks:
     last_version: 0.1.2
     name: libfreenect
     patches: patches
-    release_inc: '3'
+    release_inc: '4'
     release_tag: d1d19df8957f8d63a562b310413da15d3e6ef7a1
     ros_distro: groovy
     vcs_type: git
