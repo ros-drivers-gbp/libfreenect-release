@@ -1,7 +1,7 @@
-From cb913547188ecf866199cdfbf22215bf2727dfe0 Mon Sep 17 00:00:00 2001
+From 3e7f115c2d795badeba9b2487c4ba14547257126 Mon Sep 17 00:00:00 2001
 From: piyushk <piyushk@gmail.com>
 Date: Thu, 2 May 2013 15:12:24 -0500
-Subject: [PATCH 4/4] Added libfreenect prefix to all header references (#3)
+Subject: [PATCH 4/5] Added libfreenect prefix to all header references (#3)
 
 ---
  fakenect/fakenect.c                                |    2 +-

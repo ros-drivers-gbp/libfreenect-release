@@ -1,7 +1,7 @@
-From 98a8953f32ceefa2defb50ebb0acd1603b2b5ea7 Mon Sep 17 00:00:00 2001
+From 5f63402581530a74a10bafe05932957ed746b5f3 Mon Sep 17 00:00:00 2001
 From: Jack O'Quin <jack.oquin@gmail.com>
 Date: Thu, 25 Apr 2013 20:45:59 -0500
-Subject: [PATCH 2/4] Do not use lib64 suffix for ROS bloom release
+Subject: [PATCH 2/5] Do not use lib64 suffix for ROS bloom release
 
 ---
  cmake_modules/SetupDirectories.cmake |    4 +++-
