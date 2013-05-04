@@ -29,11 +29,11 @@
 
 #include <stdint.h>
 
-#include "libfreenect.h"
-#include "libfreenect-registration.h"
+#include "libfreenect/libfreenect.h"
+#include "libfreenect/libfreenect-registration.h"
 
 #ifdef BUILD_AUDIO
-#include "libfreenect-audio.h"
+#include "libfreenect/libfreenect-audio.h"
 #endif
 
 #ifdef __ELF__

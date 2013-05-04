@@ -27,7 +27,7 @@
 #ifndef CAMERAS_H
 #define CAMERAS_H
 
-#include "libfreenect.h"
+#include "libfreenect/libfreenect.h"
 
 // Just a couple function declarations.
 
