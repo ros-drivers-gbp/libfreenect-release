@@ -1,0 +1,123 @@
+From e9d27c0f137614cd00168587e26a945df191ad80 Mon Sep 17 00:00:00 2001
+From: piyushk <piyushk@gmail.com>
+Date: Thu, 2 May 2013 15:12:24 -0500
+Subject: [PATCH 4/5] Added libfreenect prefix to all header references (#3)
+
+---
+ fakenect/fakenect.c                                |    2 +-
+ fakenect/record.c                                  |    2 +-
+ include/{ => libfreenect}/libfreenect-audio.h      |    2 +-
+ .../{ => libfreenect}/libfreenect-registration.h   |    2 +-
+ include/{ => libfreenect}/libfreenect.h            |    0
+ src/registration.c                                 |    2 +-
+ wrappers/c_sync/libfreenect_sync.h                 |    2 +-
+ wrappers/cpp/libfreenect.hpp                       |    2 +-
+ 8 files changed, 7 insertions(+), 7 deletions(-)
+ rename include/{ => libfreenect}/libfreenect-audio.h (99%)
+ rename include/{ => libfreenect}/libfreenect-registration.h (98%)
+ rename include/{ => libfreenect}/libfreenect.h (100%)
+
+diff --git a/fakenect/fakenect.c b/fakenect/fakenect.c
+index 3f8e34b..8d3b5fc 100644
+--- a/fakenect/fakenect.c
++++ b/fakenect/fakenect.c
+@@ -23,7 +23,7 @@
+  * either License.
+  */
+ 
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+diff --git a/fakenect/record.c b/fakenect/record.c
+index 9546995..ac47011 100644
+--- a/fakenect/record.c
++++ b/fakenect/record.c
+@@ -25,7 +25,7 @@
+ 
+ #include <sys/stat.h>
+ #include <sys/types.h>
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdio.h>
+ #include <signal.h>
+ #include <string.h>
+diff --git a/include/libfreenect-audio.h b/include/libfreenect/libfreenect-audio.h
+similarity index 99%
+rename from include/libfreenect-audio.h
+rename to include/libfreenect/libfreenect-audio.h
+index 3f2feba..fc08a27 100644
+--- a/include/libfreenect-audio.h
++++ b/include/libfreenect/libfreenect-audio.h
+@@ -27,7 +27,7 @@
+ #ifndef LIBFREENECT_AUDIO_H
+ #define LIBFREENECT_AUDIO_H
+ 
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdint.h>
+ 
+ #ifdef __cplusplus
+diff --git a/include/libfreenect-registration.h b/include/libfreenect/libfreenect-registration.h
+similarity index 98%
+rename from include/libfreenect-registration.h
+rename to include/libfreenect/libfreenect-registration.h
+index 2ef5d60..3e7f480 100644
+--- a/include/libfreenect-registration.h
++++ b/include/libfreenect/libfreenect-registration.h
+@@ -27,7 +27,7 @@
+ #ifndef LIBFREENECT_REGISTRATION_H
+ #define LIBFREENECT_REGISTRATION_H
+ 
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdint.h>
+ 
+ #ifdef __cplusplus
+diff --git a/include/libfreenect.h b/include/libfreenect/libfreenect.h
+similarity index 100%
+rename from include/libfreenect.h
+rename to include/libfreenect/libfreenect.h
+diff --git a/src/registration.c b/src/registration.c
+index 072b704..ff24f00 100644
+--- a/src/registration.c
++++ b/src/registration.c
+@@ -24,7 +24,7 @@
+  * either License.
+  */
+ 
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <freenect_internal.h>
+ #include "registration.h"
+ #include <stdlib.h>
+diff --git a/wrappers/c_sync/libfreenect_sync.h b/wrappers/c_sync/libfreenect_sync.h
+index 35e76c4..a754b45 100644
+--- a/wrappers/c_sync/libfreenect_sync.h
++++ b/wrappers/c_sync/libfreenect_sync.h
+@@ -26,7 +26,7 @@
+ 
+ #ifndef FREENECT_SYNC_H
+ #define FREENECT_SYNC_H
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdint.h>
+ 
+ #ifdef __cplusplus
+diff --git a/wrappers/cpp/libfreenect.hpp b/wrappers/cpp/libfreenect.hpp
+index 0a5f637..e62925f 100644
+--- a/wrappers/cpp/libfreenect.hpp
++++ b/wrappers/cpp/libfreenect.hpp
+@@ -26,7 +26,7 @@
+ 
+ #pragma once
+ 
+-#include <libfreenect.h>
++#include <libfreenect/libfreenect.h>
+ #include <stdexcept>
+ #include <map>
+ #include <pthread.h>
+-- 
+1.7.9.5
+

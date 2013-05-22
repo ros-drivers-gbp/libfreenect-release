@@ -1,0 +1,26 @@
+From 0251ae39e8ae7e481709f5b97378bec871c8bc95 Mon Sep 17 00:00:00 2001
+From: Jack O'Quin <jack.oquin@gmail.com>
+Date: Thu, 18 Apr 2013 16:04:02 -0500
+Subject: [PATCH 1/5] Added install rule for package.xml
+
+---
+ CMakeLists.txt |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e7aa066..0f47879 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -199,3 +199,9 @@ IF ( BUILD_CPACK )
+ 
+ ENDIF ( BUILD_CPACK )
+ 
++##############################
++# Added for ROS bloom release:
++##############################
++
++# Install catkin package.xml
++install(FILES package.xml DESTINATION share/${PROJECT})
+-- 
+1.7.9.5
+
