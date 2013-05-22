@@ -27,7 +27,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "libfreenect.h"
+#include "libfreenect/libfreenect.h"
 #include "libfreenect_sync.h"
 
 FILE *open_dump(const char *filename)

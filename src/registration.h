@@ -27,7 +27,7 @@
 #ifndef REGISTRATION_H
 #define REGISTRATION_H
 
-#include "libfreenect.h"
+#include "libfreenect/libfreenect.h"
 
 // Internal function declarations relating to registration
 int freenect_init_registration(freenect_device* dev);
