@@ -1,0 +1,27 @@
+From f779a5de2f239573d773fcd6899b3415add2fb92 Mon Sep 17 00:00:00 2001
+From: Jack O'Quin <jack.oquin@gmail.com>
+Date: Thu, 25 Apr 2013 20:45:59 -0500
+Subject: [PATCH 2/5] Do not use lib64 suffix for ROS bloom release
+
+---
+ cmake_modules/SetupDirectories.cmake |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/cmake_modules/SetupDirectories.cmake b/cmake_modules/SetupDirectories.cmake
+index 99b3e5d..40e335d 100644
+--- a/cmake_modules/SetupDirectories.cmake
++++ b/cmake_modules/SetupDirectories.cmake
+@@ -12,7 +12,9 @@ STRING (TOLOWER ${PROJECT_NAME} projectNameLower)
+ SET (PROJECT_INCLUDE_INSTALL_DIR "include/${projectNameLower}")
+ 
+ IF (PROJECT_PROC_64BIT)
+-    SET (LIB_SUFFIX "64" CACHE STRING "Suffix for library installation directory")
++    ### do not use lib64 suffix for ROS bloom release:
++    #SET (LIB_SUFFIX "64" CACHE STRING "Suffix for library installation directory")
++    SET (LIB_SUFFIX "" CACHE STRING "Suffix for library installation directory")
+ ELSE (PROJECT_PROC_64BIT)
+     SET (LIB_SUFFIX "" CACHE STRING "Suffix for library installation directory")
+ ENDIF (PROJECT_PROC_64BIT)
+-- 
+1.7.9.5
+

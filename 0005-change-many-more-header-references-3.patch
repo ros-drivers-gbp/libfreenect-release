@@ -1,0 +1,268 @@
+From e6759f47a321f01d0ac963f5a228e4ad85b96bb6 Mon Sep 17 00:00:00 2001
+From: Jack O'Quin <jack.oquin@gmail.com>
+Date: Fri, 3 May 2013 22:30:57 -0500
+Subject: [PATCH 5/5] change many more header references (#3)
+
+---
+ CMakeLists.txt              |    6 +++---
+ examples/glpclview.c        |    2 +-
+ examples/glview.c           |    2 +-
+ examples/hiview.c           |    2 +-
+ examples/micview.c          |    4 ++--
+ examples/regtest.c          |    2 +-
+ examples/regview.c          |    2 +-
+ examples/tiltdemo.c         |    2 +-
+ examples/wavrecord.c        |    4 ++--
+ src/CMakeLists.txt          |    4 ++--
+ src/audio.c                 |    4 ++--
+ src/cameras.h               |    2 +-
+ src/freenect_internal.h     |    6 +++---
+ src/loader.c                |    2 +-
+ src/registration.h          |    2 +-
+ src/usb_libusb10.h          |    2 +-
+ wrappers/cpp/CMakeLists.txt |    2 +-
+ 17 files changed, 25 insertions(+), 25 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 86d10ba..313da55 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -189,10 +189,10 @@ IF ( BUILD_CPACK )
+ 
+   INSTALL(FILES "${CMAKE_BINARY_DIR}/lib/libfreenect.a" DESTINATION ${PROJECT_LIBRARY_INSTALL_DIR})
+   if (BUILD_AUDIO)
+-    INSTALL(FILES "include/libfreenect-audio.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
++    INSTALL(FILES "include/libfreenect/libfreenect-audio.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
+   endif()
+-  INSTALL(FILES "include/libfreenect.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
+-  INSTALL(FILES "include/libfreenect-registration.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
++  INSTALL(FILES "include/libfreenect/libfreenect.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
++  INSTALL(FILES "include/libfreenect/libfreenect-registration.h" DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
+   INSTALL(FILES "APACHE20" DESTINATION "share/doc/${CPACK_PACKAGE_NAME}")
+   INSTALL(FILES "GPL2" DESTINATION "share/doc/${CPACK_PACKAGE_NAME}")
+   INSTALL(FILES "README.asciidoc" DESTINATION "share/doc/${CPACK_PACKAGE_NAME}")
+diff --git a/examples/glpclview.c b/examples/glpclview.c
+index 40b59c4..fa1e378 100644
+--- a/examples/glpclview.c
++++ b/examples/glpclview.c
+@@ -26,7 +26,7 @@
+  * either License.
+  */
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ #include "libfreenect_sync.h"
+ #include <stdio.h>
+ #include <stdlib.h>
+diff --git a/examples/glview.c b/examples/glview.c
+index 979546d..dde6931 100644
+--- a/examples/glview.c
++++ b/examples/glview.c
+@@ -29,7 +29,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <assert.h>
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ 
+ #include <pthread.h>
+ 
+diff --git a/examples/hiview.c b/examples/hiview.c
+index 4008009..f73de6e 100644
+--- a/examples/hiview.c
++++ b/examples/hiview.c
+@@ -29,7 +29,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <assert.h>
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ 
+ #include <pthread.h>
+ 
+diff --git a/examples/micview.c b/examples/micview.c
+index 280c6d8..bceddb5 100644
+--- a/examples/micview.c
++++ b/examples/micview.c
+@@ -24,8 +24,8 @@
+  * either License.
+  */
+ 
+-#include "libfreenect.h"
+-#include "libfreenect-audio.h"
++#include "libfreenect/libfreenect.h"
++#include "libfreenect/libfreenect-audio.h"
+ #include <stdio.h>
+ #include <string.h>
+ #include <signal.h>
+diff --git a/examples/regtest.c b/examples/regtest.c
+index ecae9be..181a34a 100644
+--- a/examples/regtest.c
++++ b/examples/regtest.c
+@@ -27,7 +27,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ #include "libfreenect_sync.h"
+ 
+ FILE *open_dump(const char *filename)
+diff --git a/examples/regview.c b/examples/regview.c
+index 1bd2281..b037f63 100644
+--- a/examples/regview.c
++++ b/examples/regview.c
+@@ -29,7 +29,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <assert.h>
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ 
+ #include <pthread.h>
+ 
+diff --git a/examples/tiltdemo.c b/examples/tiltdemo.c
+index 9848a44..2ed3f8e 100644
+--- a/examples/tiltdemo.c
++++ b/examples/tiltdemo.c
+@@ -26,7 +26,7 @@
+  * either License.
+  */
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ #include "libfreenect_sync.h"
+ #include <stdio.h>
+ #include <stdlib.h>
+diff --git a/examples/wavrecord.c b/examples/wavrecord.c
+index c7abc69..19a2d49 100644
+--- a/examples/wavrecord.c
++++ b/examples/wavrecord.c
+@@ -24,8 +24,8 @@
+  * either License.
+  */
+ 
+-#include "libfreenect.h"
+-#include "libfreenect-audio.h"
++#include "libfreenect/libfreenect.h"
++#include "libfreenect/libfreenect-audio.h"
+ #include <stdio.h>
+ #include <signal.h>
+ 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index e70b6e7..40c993a 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -49,10 +49,10 @@ target_link_libraries (freenect ${LIBUSB_1_LIBRARIES})
+ target_link_libraries (freenectstatic ${LIBUSB_1_LIBRARIES})
+ 
+ # Install the header files
+-install (FILES "../include/libfreenect.h" "../include/libfreenect-registration.h"
++install (FILES "../include/libfreenect/libfreenect.h" "../include/libfreenect/libfreenect-registration.h"
+   DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
+ if(BUILD_AUDIO)
+-  install (FILES "../include/libfreenect-audio.h"
++  install (FILES "../include/libfreenect/libfreenect-audio.h"
+     DESTINATION ${PROJECT_INCLUDE_INSTALL_DIR})
+ endif()
+ 
+diff --git a/src/audio.c b/src/audio.c
+index f9a2e75..129ce5d 100644
+--- a/src/audio.c
++++ b/src/audio.c
+@@ -23,8 +23,8 @@
+  * Binary distributions must follow the binary distribution requirements of
+  * either License.
+  */
+-#include "libfreenect.h"
+-#include "libfreenect-audio.h"
++#include "libfreenect/libfreenect.h"
++#include "libfreenect/libfreenect-audio.h"
+ #include "freenect_internal.h"
+ 
+ #include <string.h>
+diff --git a/src/cameras.h b/src/cameras.h
+index 7091ed5..e3cd83b 100644
+--- a/src/cameras.h
++++ b/src/cameras.h
+@@ -27,7 +27,7 @@
+ #ifndef CAMERAS_H
+ #define CAMERAS_H
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ 
+ // Just a couple function declarations.
+ 
+diff --git a/src/freenect_internal.h b/src/freenect_internal.h
+index 390e061..9423d51 100644
+--- a/src/freenect_internal.h
++++ b/src/freenect_internal.h
+@@ -29,11 +29,11 @@
+ 
+ #include <stdint.h>
+ 
+-#include "libfreenect.h"
+-#include "libfreenect-registration.h"
++#include "libfreenect/libfreenect.h"
++#include "libfreenect/libfreenect-registration.h"
+ 
+ #ifdef BUILD_AUDIO
+-#include "libfreenect-audio.h"
++#include "libfreenect/libfreenect-audio.h"
+ #endif
+ 
+ #ifdef __ELF__
+diff --git a/src/loader.c b/src/loader.c
+index f5bf058..f7e9682 100644
+--- a/src/loader.c
++++ b/src/loader.c
+@@ -24,7 +24,7 @@
+  * either License.
+  */
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ #include "freenect_internal.h"
+ #include "loader.h"
+ #include <string.h>
+diff --git a/src/registration.h b/src/registration.h
+index ce09b2d..fb65894 100644
+--- a/src/registration.h
++++ b/src/registration.h
+@@ -27,7 +27,7 @@
+ #ifndef REGISTRATION_H
+ #define REGISTRATION_H
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ 
+ // Internal function declarations relating to registration
+ int freenect_init_registration(freenect_device* dev);
+diff --git a/src/usb_libusb10.h b/src/usb_libusb10.h
+index f2e0bd7..701e54a 100644
+--- a/src/usb_libusb10.h
++++ b/src/usb_libusb10.h
+@@ -27,7 +27,7 @@
+ #ifndef USB_LIBUSB10
+ #define USB_LIBUSB10
+ 
+-#include "libfreenect.h"
++#include "libfreenect/libfreenect.h"
+ #include <libusb.h>
+ 
+ #if defined(__APPLE__)
+diff --git a/wrappers/cpp/CMakeLists.txt b/wrappers/cpp/CMakeLists.txt
+index bb9c53c..32603ad 100644
+--- a/wrappers/cpp/CMakeLists.txt
++++ b/wrappers/cpp/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ INSTALL(FILES libfreenect.hpp
+-  DESTINATION include)
++  DESTINATION include/libfreenect)
+ 
+ IF(BUILD_EXAMPLES)
+ 
+-- 
+1.7.9.5
+
