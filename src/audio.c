@@ -23,8 +23,8 @@
  * Binary distributions must follow the binary distribution requirements of
  * either License.
  */
-#include "libfreenect/libfreenect.h"
-#include "libfreenect/libfreenect-audio.h"
+#include "libfreenect.h"
+#include "libfreenect-audio.h"
 #include "freenect_internal.h"
 
 #include <string.h>
