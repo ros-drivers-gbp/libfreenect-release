@@ -26,7 +26,7 @@
 
 #ifndef FREENECT_SYNC_H
 #define FREENECT_SYNC_H
-#include <libfreenect.h>
+#include <libfreenect/libfreenect.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
