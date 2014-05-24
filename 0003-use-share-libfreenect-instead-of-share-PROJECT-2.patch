@@ -1,4 +1,4 @@
-From 04452016f6ebc92f5e310b09b5dd4bf05385ed0e Mon Sep 17 00:00:00 2001
+From 9630909edaf27557b0696b07fc869502472aa63b Mon Sep 17 00:00:00 2001
 From: piyushk <piyushk@gmail.com>
 Date: Thu, 2 May 2013 15:04:09 -0500
 Subject: [PATCH 3/5] use share/libfreenect instead of share/PROJECT (#2)
