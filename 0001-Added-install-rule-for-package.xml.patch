@@ -1,4 +1,4 @@
-From f86f20d406298a33b6fcb0863d75955e1dc30d31 Mon Sep 17 00:00:00 2001
+From 07e6382f129962c3c6a8acc5c02c6adcdafd5edf Mon Sep 17 00:00:00 2001
 From: Jack O'Quin <jack.oquin@gmail.com>
 Date: Thu, 18 Apr 2013 16:04:02 -0500
 Subject: [PATCH 1/5] Added install rule for package.xml

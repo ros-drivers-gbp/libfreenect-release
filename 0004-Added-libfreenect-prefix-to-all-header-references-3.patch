@@ -1,4 +1,4 @@
-From 6832f9e1a295e5478c1f5836a0880caf2551ef23 Mon Sep 17 00:00:00 2001
+From 1fd565d50e3a284c030ebd05b07c3fbd5a002e5a Mon Sep 17 00:00:00 2001
 From: piyushk <piyushk@gmail.com>
 Date: Thu, 2 May 2013 15:12:24 -0500
 Subject: [PATCH 4/5] Added libfreenect prefix to all header references (#3)

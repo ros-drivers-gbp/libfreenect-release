@@ -1,4 +1,4 @@
-From 0c1bbf4841b2978543aa36923bff5ea78d789b99 Mon Sep 17 00:00:00 2001
+From f2748951e2992de141d7274b502711bdadc56302 Mon Sep 17 00:00:00 2001
 From: Jack O'Quin <jack.oquin@gmail.com>
 Date: Thu, 25 Apr 2013 20:45:59 -0500
 Subject: [PATCH 2/5] Do not use lib64 suffix for ROS bloom release
