@@ -1,0 +1,12 @@
+Source: ros-hydro-libfreenect
+Section: misc
+Priority: extra
+Maintainer: Jack O'Quin <jack.oquin@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, freeglut3-dev, libusb-1.0-0-dev, libxi-dev, libxmu-dev
+Homepage: http://ros.org/wiki/libfreenect
+Standards-Version: 3.9.2
+
+Package: ros-hydro-libfreenect
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, freeglut3-dev, libusb-1.0-0-dev, libxi-dev, libxmu-dev, ros-hydro-catkin
+Description: Open source libraries that will enable the Kinect to be used with Windows, Linux, and Mac.
