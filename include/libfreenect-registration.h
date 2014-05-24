@@ -27,7 +27,7 @@
 #ifndef LIBFREENECT_REGISTRATION_H
 #define LIBFREENECT_REGISTRATION_H
 
-#include <libfreenect/libfreenect.h>
+#include <libfreenect.h>
 #include <stdint.h>
 
 #ifdef __cplusplus

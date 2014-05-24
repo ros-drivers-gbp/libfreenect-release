@@ -26,7 +26,7 @@
  * either License.
  */
 
-#include "libfreenect/libfreenect.h"
+#include "libfreenect.h"
 #include "libfreenect_sync.h"
 #include <stdio.h>
 #include <stdlib.h>
